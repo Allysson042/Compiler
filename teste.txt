@@ -1,8 +1,22 @@
 program ola{
 
-  int varInt;
-  bool varBool;
+  bool varInt;
 
-  print(varBool);
+  func int calculadora(int op,int x, int y){
+    if(op == 1){
+      return x + y;
+
+    }else{ 
+      if (op == 2){
+       return x - y;
+      }
+    }
+   
+  return 0;
+  }
+
+
+varInt = true;
+calculadora(varInt, 2, 2);
 
 }

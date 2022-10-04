@@ -1,2 +1,16 @@
-temp0 = varBool
-print(temp0)
+calculadora: temp0 = op == 1
+if temp0 goto Aif-6-1
+if !temp0 goto Bif-6-1
+Aif-6-1: temp0 = x + y
+return temp0
+goto Bif-6-2
+Bif-6-1: temp0 = op == 2
+if temp0 goto Aif-10-2
+if !temp0 goto Bif-10-2
+Aif-10-2: temp0 = x - y
+return temp0
+Bif-10-2: Bif-6-2: temp0 = 0
+return temp0
+temp0 = true
+varInt = temp0
+temp0 = varInt

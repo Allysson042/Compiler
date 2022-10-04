@@ -64,7 +64,10 @@ def generate_temp_expressions(expression_tokens_list: list[Token], precedence_op
     token = expression_tokens_list[0]
     write_to_file(f'temp{temp_index} = {token.lexeme}')
     
-    if (is_number(token)):
+    if token.token == "IDENTIFIER":
+      temp_list.append(ExpressionToken(token=token, type=token.type)) # add temp ExpressionToken to our temp_list
+    
+    elif (is_number(token)):
       temp_list.append(ExpressionToken(token=token, type="INT_TYPE")) # add temp ExpressionToken to our temp_list
     else:
       temp_list.append(ExpressionToken(token=token, type="BOOL_TYPE")) # add temp ExpressionToken to our temp_list
